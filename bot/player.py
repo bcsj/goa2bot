@@ -1,4 +1,3 @@
-import re
 from uuid import uuid4
 
 from db import DB, dbconnection
@@ -14,10 +13,10 @@ db = DB()
 @dbconnection
 def create(discord_name, discord_id):
     db.cursor()
+    uuid = uuid4()
     name, discriminator = dnsplit(discord_name)
     nick = name + "#" + discriminator
-    uuid = uuid4()
-    
+
     # Insert into players
     sql = """
         INSERT INTO players (
