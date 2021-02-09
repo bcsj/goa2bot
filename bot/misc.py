@@ -19,7 +19,7 @@ def split_discord_name(dname):
 def confidence(games):
     return games/(1+games)
 
-def winrate(games, wins):
+def win_rate(games, wins):
     return wins/games
 
 def p_value(games, wins):
